@@ -2,14 +2,22 @@ import React, { useEffect } from 'react'
 import Navbar from '../navbar'
 import Footer from '../footer'
 import { StaticImage } from 'gatsby-plugin-image'
-import { window } from 'browser-monads'
+import { window, document } from 'browser-monads'
 
 const Page = ({ children }) => {
 
+    let location = window.location.pathname
+
     useEffect(() => {
         document.getElementById('pageWrapper').scrollTo(0,0)
-    }, [ window.location ])
+    }, [ location ])
 
+    let admin;
+
+    if(location === '/admin'){
+        admin = true
+    }
+    
     return(
         <main className="pageLayout">
             <div className="bgImageWrapper">
@@ -24,7 +32,7 @@ const Page = ({ children }) => {
                 <div className="max-w-screen-xxl mx-auto">
                     {children}
                 </div>
-                <Footer />
+                {admin ? null : <Footer />}
             </div>
         </main>
     )
@@ -32,9 +40,15 @@ const Page = ({ children }) => {
 
 const Layout = ({ children }) => {
 
+    let admin;
+
+    if(window.location.pathname === '/admin'){
+        admin = true
+    }
+
     return(
         <div>
-            <Navbar /> 
+            {admin ? null : <Navbar /> }
             <Page>
                 {children}
             </Page>

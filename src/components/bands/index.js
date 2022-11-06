@@ -67,12 +67,13 @@ const BandsDisplay = () => {
                         return(
                             <li key={i} className="flex flex-col sm:flex-row bg-zinc-900/70 rounded-sm shadow-md">
                                 <img 
+                                    loading="lazy"
                                     src={band.image} 
                                     alt={`${band.title} live on stage at Jax every ${band.day} at ${band.time}`} 
                                     className="sm:max-h-[200px]"
                                 />
                                 <div className="flex flex-col py-4 px-2 sm:px-4">
-                                    <h3 className="headers text-3xl">
+                                    <h3 className="headers text-red-600 text-3xl">
                                         {band.title}
                                     </h3>
                                     <h4 className="uppercase">
@@ -106,7 +107,7 @@ const BandsDisplay = () => {
                                     className="sm:max-h-[200px]"
                                 />
                                 <div className="flex flex-col py-4 px-2 sm:px-4">
-                                    <h3 className="headers text-3xl">
+                                    <h3 className="headers text-red-600 text-3xl">
                                         {band.title}
                                     </h3>
                                     <h4 className="uppercase">
@@ -140,7 +141,7 @@ const BandsDisplay = () => {
                                     className="sm:max-h-[200px]"
                                 />
                                 <div className="flex flex-col py-4 px-2 sm:px-4">
-                                    <h3 className="headers text-3xl">
+                                    <h3 className="headers text-red-600 text-3xl">
                                         {band.title}
                                     </h3>
                                     <h4 className="uppercase">

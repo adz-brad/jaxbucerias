@@ -67,13 +67,3 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
-
-# Editor Files
-src/apollo
-src/cloudinary
-src/admin/
-src/components/locale
-src/pages/admin.js
-src/components/admin
-src/recoil/
-admin.json
