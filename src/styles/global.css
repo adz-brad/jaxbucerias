@@ -47,7 +47,7 @@ body {
 }
 
 .bgImageWrapper {
-    @apply fixed h-full w-full top-[100px] md:top-[120px];
+    @apply fixed h-full w-full top-[40px] md:top-[60px];
 }
 
  /*--- Scrollbars --- */

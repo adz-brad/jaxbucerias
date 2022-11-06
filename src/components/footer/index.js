@@ -15,10 +15,10 @@ const Footer = () => {
                                     key={i}
                                     className="flex flex-row items-center"
                                 >
-                                    <span className="headers text-red-600 text-3xl">
+                                    <span className="headers text-red-600 text-2xl md:text-3xl">
                                         {day.day}
                                     </span>
-                                    <span className="text-2xl ml-2">
+                                    <span className="text-xl md:text-2xl ml-2">
                                         {day.open} - {day.closed}
                                     </span>
                                 </li>

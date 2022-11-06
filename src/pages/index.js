@@ -112,11 +112,12 @@ const eventsToday = events.filter(event => event.day === days[today.getDay()])
                             <li key={i} className="flex flex-col sm:flex-row rounded-md shadow-md">
                                 <img 
                                     src={band.image} 
+                                    loading="lazy"
                                     alt={`${band.title} live on stage at Jax every ${band.day} at ${band.time}`} 
                                     className="sm:max-h-[200px]"
                                 />
                                 <div className="flex flex-col py-4 px-2 sm:px-4">
-                                    <h3 className="headers text-3xl">
+                                    <h3 className="headers text-red-600 text-3xl">
                                         {band.title}
                                     </h3>
                                     <h4 className="uppercase">
@@ -152,11 +153,12 @@ const eventsToday = events.filter(event => event.day === days[today.getDay()])
                             <li key={i} className="flex flex-col sm:flex-row rounded-md shadow-md">
                                 <img 
                                     src={event.image} 
+                                    loading="lazy"
                                     alt={`${event.title} live on stage at Jax every ${event.day} at ${event.time}`} 
                                     className="sm:max-h-[200px]"
                                 />
                                 <div className="flex flex-col py-4 px-2 sm:px-4">
-                                    <h3 className="headers text-3xl">
+                                    <h3 className="headers text-red-600 text-3xl">
                                         {event.title}
                                     </h3>
                                     <h4 className="uppercase">
