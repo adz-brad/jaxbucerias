@@ -16,8 +16,11 @@ const Menu = ({ data }) => {
   return(
 
     <div className="flex flex-col w-full md:my-4 px-4">
+      <h1 className="headers text-6xl">
+                Menu
+            </h1>
       {menu ?
-        <ul className="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-4 mb-1 md:mb-2">
+        <ul className="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-4 mt-4 md:mb-2">
           {menu.map((item, i) => {
             return(
               <li 
