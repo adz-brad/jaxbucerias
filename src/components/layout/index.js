@@ -14,7 +14,7 @@ const Page = ({ children }) => {
 
     let admin;
 
-    if(location === '/admin'){
+    if(location === '/admin/'){
         admin = true
     }
     
@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
 
     let admin;
 
-    if(window.location.pathname === '/admin'){
+    if(window.location.pathname === '/admin/'){
         admin = true
     }
 
