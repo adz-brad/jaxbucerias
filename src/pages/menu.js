@@ -132,6 +132,17 @@ query {
           en
           sp
         }
+        items: childrenItem {
+          title {
+            en
+            sp
+          }
+          price
+          description {
+            en
+            sp
+          }
+        }
         subcategories: childrenSubcategory {
           title {
             en
