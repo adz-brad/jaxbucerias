@@ -3,10 +3,18 @@ import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { menuLinks } from '../../data/menuLinks'
 import { socialLinks } from '../../data/socialLinks'
+import { enableScroll, disableScroll } from '../../hooks'
 
 const Navbar = () => {
 
     const [ mobileNav, setMobileNav ] = useState(false)
+
+    if(mobileNav){
+        disableScroll();
+      }
+      else{
+        enableScroll();
+      }
 
     const mobileNavOpen = 'left-0'
     const mobileNavClosed = '-translate-x-full xl:-translate-x-0'
@@ -66,7 +74,7 @@ const Navbar = () => {
 
 
                 <div 
-                    className={`navMenu fixed flex flex-col top-[110px] md:top-[130px] bg-zinc-900 w-2/3 max-w-[300px] rounded-r-md shadow-md transition-all h-[calc(100vh-120px)] md:h-[calc(100vh-140px)] ${mobileNav ? mobileNavOpen : mobileNavClosed} xl:relative xl:flex-row xl:grow xl:top-0 xl:h-auto xl:w-auto xl:max-w-none xl:rounded-none xl:shadow-none`}
+                    className={`navMenu fixed flex flex-col top-[110px] md:top-[130px] bg-zinc-900 w-2/3 max-w-[300px] rounded-r-md shadow-md transition-all h-[calc(100vh-180px)] md:h-[calc(100vh-200px)] ${mobileNav ? mobileNavOpen : mobileNavClosed} xl:relative xl:flex-row xl:grow xl:top-0 xl:h-auto xl:w-auto xl:max-w-none xl:rounded-none xl:shadow-none`}
                 >
                     <ul className="flex flex-col xl:flex-row xl:items-center mt-2 mx-auto select-none">
                         { menuLinks ?
