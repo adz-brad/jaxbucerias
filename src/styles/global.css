@@ -42,6 +42,10 @@ body {
     z-index: 999;
 }
 
+.navMenu {
+    z-index:999;
+}
+
 .pageLayout {
     @apply relative flex flex-col;
 }

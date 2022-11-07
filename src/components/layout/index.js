@@ -28,7 +28,7 @@ const Page = ({ children }) => {
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-10px)] max-w-screen-lg"
                 />
             </div>
-            <div id="pageWrapper" className="z-50 bg-zinc-900/90">
+            <div id="pageWrapper" className="z-10 bg-zinc-900/90">
                 <div className="max-w-screen-xxl mx-auto">
                     {children}
                 </div>

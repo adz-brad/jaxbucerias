@@ -66,7 +66,7 @@ const Navbar = () => {
 
 
                 <div 
-                    className={`z-10 flex flex-col absolute top-[110px] md:top-[130px] bg-zinc-900 w-2/3 max-w-[300px] rounded-r-md shadow-md transition-all h-[calc(100vh-120px)] md:h-[calc(100vh-140px)] ${mobileNav ? mobileNavOpen : mobileNavClosed} xl:relative xl:flex-row xl:grow xl:top-0 xl:h-auto xl:w-auto xl:max-w-none xl:rounded-none xl:shadow-none`}
+                    className={`navMenu fixed flex flex-col top-[110px] md:top-[130px] bg-zinc-900 w-2/3 max-w-[300px] rounded-r-md shadow-md transition-all h-[calc(100vh-120px)] md:h-[calc(100vh-140px)] ${mobileNav ? mobileNavOpen : mobileNavClosed} xl:relative xl:flex-row xl:grow xl:top-0 xl:h-auto xl:w-auto xl:max-w-none xl:rounded-none xl:shadow-none`}
                 >
                     <ul className="flex flex-col xl:flex-row xl:items-center mt-2 mx-auto select-none">
                         { menuLinks ?
