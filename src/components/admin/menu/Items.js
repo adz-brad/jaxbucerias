@@ -18,10 +18,10 @@ const Items = () => {
 
     const setModal = useSetRecoilState(modalState)
 
-    const addItem = (parent) => {
+    const addItem = (parent, order) => {
         setModal({
             open:true,
-            content: <AddItem parent={parent} />
+            content: <AddItem parent={parent} order={order} />
         })
     }
 
@@ -36,6 +36,14 @@ const Items = () => {
         
         const { data: itemsData } = useQuery(itemsQuery, { variables: { parent: parent?._id }})
 
+        const [ length, setLength ] = useState(0)
+
+        useEffect(() => {
+            if(itemsData){
+                setLength(itemsData.items.length)
+            }
+        }, [ itemsData ])
+
             return (
                 <>
                     {itemsData ?
@@ -46,7 +54,7 @@ const Items = () => {
                     <li>
                         <button
                             className="flex flex-row items-center justify-center h-full w-full bg-zinc-800/50 hover:bg-zinc-800/80 p-4 rounded-md hover:shadow-lg text-3xl"
-                            onClick={() => addItem(parent._id)}
+                            onClick={() => addItem(parent._id, length)}
                         >
                             <MdAddCircleOutline />
                             <span className="text-xl uppercase ml-2">
@@ -67,7 +75,6 @@ const Items = () => {
         }
     }, [ subcategoriesData ])
 
-
     return(
         <div>
             { subcategories.length > 0 ?
@@ -84,11 +91,14 @@ const Items = () => {
                     )
                 })
             : 
-                category ?
+                subcategory ?
+                    <ul className="grid grid-cols-4 gap-2 py-2">
+                        <Items parent={subcategory} />
+                    </ul>
+                :                     
                     <ul className="grid grid-cols-4 gap-2 py-2">
                         <Items parent={category} />
                     </ul>
-                : null
             }
         </div>
     )

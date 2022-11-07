@@ -16,6 +16,7 @@ const EditItem = ({ item }) => {
     const [ price, setPrice ] = useState(parseInt(item.price))
     const [ description, setDescription ] = useState(item.description.en)
     const [ localeDescription, setLocaleDescription ] = useState(item.description.sp)
+    const [ order, setOrder ] = useState(item.order)
 
     const updateItemFailed = () => {
         toast(`${title.length === 0 ? 'Title Field Required' : price.length === 0 ? 'Price Field Required' : 'Error Adding Menu Item'}`, {
@@ -71,7 +72,7 @@ const EditItem = ({ item }) => {
 
 
     const [ menuItemUpdate ] = useMutation(updateMenuItem, { 
-        variables: { set: { title: {en: title, sp: localeTitle }, price: price, description: {en: description, sp: localeDescription }, parent: item.parent }},
+        variables: { query: { _id: item._id }, set: { title: {en: title, sp: localeTitle }, price: price, description: {en: description, sp: localeDescription }, parent: item.parent, order: order }},
         refetchQueries: [ { query: itemsQuery }, 'GetItems']
         }
       )
@@ -213,6 +214,25 @@ const EditItem = ({ item }) => {
                             value={localeDescription}
                             onChange={(e) => setLocaleDescription(e.target.value)}
                             placeholder="Add Menu Item Description (Spanish)"
+                        />
+                    </div>
+                    <div className="flex flex-col my-4">
+                        <label 
+                            htmlFor="itemOrder"
+                            className="headers text-2xl mb-2 text-red-600"
+                        >
+                            Order
+                        </label>
+                        <input 
+                            name="Item Order"
+                            id="itemOrder"
+                            type="number" 
+                            min="0"
+                            step="1"
+                            className="p-2 rounded-sm hover:shadow-md"
+                            value={order}
+                            onChange={(e) => setOrder(e.target.value)}
+                            placeholder="Set Menu Item Order"
                         />
                     </div>
                 </div>

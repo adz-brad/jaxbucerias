@@ -55,11 +55,11 @@ const eventsToday = events.filter(event => event.day === days[today.getDay()])
       <div className="flex flex-col">
         <div className="relative">
         <video 
-          repeat 
+          repeat="true"
           loop 
           autoPlay 
           muted 
-          playsinline 
+          playsInline 
           className="w-full rounded-t-[20px] shadow-lg"
         >
           <source 
@@ -73,6 +73,7 @@ const eventsToday = events.filter(event => event.day === days[today.getDay()])
           src="../assets/images/favicon.png"
           loading="eager"
           className="w-1/2 md:w-auto"
+          alt="Jax Bar & Grill - Bucerias, Nayarit, Mexico - Home of the best live music in the bay!"
         />
         <span className="script text-4xl md:text-8xl -translate-y-4 md:-translate-y-8 filter drop-shadow-lg">Bucerias, Nayarit</span>
         <span className="headers filter drop-shadow-lg text-xl md:text-3xl xl:text-5xl -mt-2 md:mt-2">

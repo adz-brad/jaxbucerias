@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return(
         <nav className="navbar">
-            <div className="relative flex flex-row items-center w-full max-w-screen-xxl mx-auto h-full z-40">
+            <div className="relative flex flex-row items-center w-full max-w-screen-xxl mx-auto h-full z-40 bg-zinc-900">
                 <Link
                     to="/"
                     className="relative z-20 ml-4 xxl:ml-0 h-[calc(100%-5px)] py-4 flex flex-row items-center select-none"

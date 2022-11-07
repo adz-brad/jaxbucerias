@@ -32,10 +32,10 @@ const Footer = () => {
                 <iframe
                     className="h-[300px] w-full" 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3730.8353176375854!2d-105.3435548846706!3d20.75746790235929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842140946c943487%3A0xb427b622cdd4112e!2sJax%20Bar%20%26%20Grill!5e0!3m2!1sen!2sca!4v1606345792933!5m2!1sen!2sca" 
-                    frameborder="0"  
-                    allowfullscreen="" 
+                    frameBorder="0"  
+                    allowFullScreen
                     aria-hidden="false" 
-                    tabindex="0"
+                    tabIndex="0"
                 />
             </div>
         </div>

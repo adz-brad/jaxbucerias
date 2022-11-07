@@ -38,16 +38,16 @@ body {
 }
 
 .navbar {
-    @apply absolute top-0 left-0 h-[100px] md:h-[120px] w-full bg-gradient-to-b from-zinc-900 to-zinc-900/30 via-zinc-900/80;
+    @apply h-[100px] md:h-[120px] w-full bg-zinc-900;
     z-index: 999;
 }
 
 .pageLayout {
-    @apply relative flex flex-col h-[calc(100vh-100px)] md:h-[calc(100vh-120px)] top-[100px] md:top-[120px];
+    @apply relative flex flex-col;
 }
 
 .bgImageWrapper {
-    @apply fixed h-full w-full top-[40px] md:top-[60px];
+    @apply fixed top-0 left-0 h-full w-full;
 }
 
  /*--- Scrollbars --- */

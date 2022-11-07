@@ -13,6 +13,8 @@ const Menu = ({ data }) => {
     setSubCategory(category ? category.subcategories ? category.subcategories[0] : null : null)
   }, [ category ])
 
+  console.log(subCategory)
+
   return(
 
     <div className="flex flex-col w-full md:my-4 px-4">
@@ -65,10 +67,10 @@ const Menu = ({ data }) => {
             : null 
       : null }
       { subCategory ?
-        <>
-        <ul className="bg-zinc-900/60">
+        <> 
           {subCategory.subcategories.length > 0 ?
-          subCategory.subcategories.map((item, i) => {
+          <ul className="bg-zinc-900/60">
+          {subCategory.subcategories.map((item, i) => {
             return(
               <li key={i} className="mb-8">
                 <h3 className="headers text-4xl mt-4 text-red-500">{item.title.en}</h3>
@@ -81,14 +83,15 @@ const Menu = ({ data }) => {
                 </ul>
               </li>
             )
-          })
-        
+          })}
+          </ul>
           : subCategory.items.length > 0 ?
-            subCategory.items.map((item, i) => {
-              return <div className="my-4"><MenuItem key={i} _key={i} item={item} /></div>
-            })
+            <ul className="bg-zinc-900/60 grid grid-cols-1 md:grid-cols-2 md:gap-2 lg:grid-cols-3 xl:grid-cols-4">
+              {subCategory.items.map((item, i) => {
+                return <MenuItem key={i} _key={i} item={item} />
+              })}
+            </ul>
           : null }
-        </ul>
         </>
       : null }
     </div>
@@ -126,6 +129,7 @@ query {
           en
           sp
         }
+        order
       }
       subcategories: childrenSubcategory {
         title {
@@ -142,6 +146,7 @@ query {
             en
             sp
           }
+          order
         }
         subcategories: childrenSubcategory {
           title {
@@ -158,6 +163,7 @@ query {
               en
               sp
             }
+            order
           }
         }
       }

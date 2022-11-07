@@ -7,7 +7,7 @@ import { insertMenuItem } from '../../../apollo/mutations'
 import { useMutation } from '@apollo/client';
 import { itemsQuery } from '../../../apollo/queries';
 
-const AddItem = ({ parent }) => {
+const AddItem = ({ parent, order }) => {
 
     const setModal = useSetRecoilState(modalState)
         
@@ -44,7 +44,7 @@ const AddItem = ({ parent }) => {
       };
 
       const [ insertItem ] = useMutation(insertMenuItem, { 
-        variables: { data: { title: {en: title, sp: localeTitle }, price: price, description: {en: description, sp: localeDescription }, parent: parent }},
+        variables: { data: { title: {en: title, sp: localeTitle }, price: price, description: {en: description, sp: localeDescription }, parent: parent, order: order + 1 }},
         refetchQueries: [ { query: itemsQuery }, 'GetItems']
         }
       )

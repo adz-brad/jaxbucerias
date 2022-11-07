@@ -44,7 +44,7 @@ const Editor = ({ user, app, editor }) => {
     if(apollo){
     return(
             <ApolloProvider client={apollo}>
-                <div className="fixed top-[140px] left-0 h-[calc(100%-140px)] w-full flex flex-col p-4 overflow-y-auto">
+                <div className="fixed top-[140px] left-0 h-[calc(100%-140px)] w-full flex flex-col p-4 overflow-y-auto bg-zinc-900/80">
                     <Modal />
                     { editor === 'pages' ?
                         <>Pages</>
@@ -59,6 +59,9 @@ const Editor = ({ user, app, editor }) => {
                 </div>
             </ApolloProvider>
         )
+    }
+    else{
+        return null
     }
 }
 

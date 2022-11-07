@@ -57,6 +57,9 @@ const Subcategories = () => {
             </ul>
         )
     }
+    else {
+        return null
+    }
 }
 
 export default Subcategories

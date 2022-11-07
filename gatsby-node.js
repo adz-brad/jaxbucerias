@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 // Create Menu Nodes
 
-exports.sourceNodes = async ({ actions, createContentDigest, createNodeId}) => {
+exports.sourceNodes = async ({ actions, createContentDigest }) => {
 
     const { createNode } = actions;
 
@@ -43,7 +43,7 @@ exports.sourceNodes = async ({ actions, createContentDigest, createNodeId}) => {
 
     const items = await fetchData({
         endpoint: process.env.GATSBY_REALM_GQL_ENDPOINT,
-        query: "{\r\n    items {\r\n        _id\r\n        title {\r\n            en\r\n            sp\r\n        }\r\n        price\r\n        description {\r\n            en\r\n            sp\r\n        }\r\n        parent\r\n    }\r\n}",
+        query: "{\r\n    items(limit: 1000) {\r\n        _id\r\n        title {\r\n            en\r\n            sp\r\n        }\r\n        price\r\n        description {\r\n            en\r\n            sp\r\n        }\r\n        parent\r\n    order\r\n }\r\n}",
         variables: {},
     }).then(res => { return res.data.items })
 
@@ -56,7 +56,8 @@ exports.sourceNodes = async ({ actions, createContentDigest, createNodeId}) => {
         }
         if(items){
             const filteredItems = items.filter(item => item.parent === category._id)
-            filteredItems.map(item => children.push(item._id))
+            const sortedItems = filteredItems.sort((a, b) => a.order > b.order ? 1 : -1)
+            sortedItems.map(item => children.push(item._id))
         }
         await createNode({
             id: category._id,
@@ -79,7 +80,8 @@ exports.sourceNodes = async ({ actions, createContentDigest, createNodeId}) => {
             filteredSubcategories.map(item => children.push(item._id))
             if(items){
                 const filteredItems = items.filter(item => item.parent === subcategory._id)
-                filteredItems.map(item => children.push(item._id))
+                const sortedItems = filteredItems.sort((a, b) => a.order > b.order ? 1 : -1)
+                sortedItems.map(item => children.push(item._id))
             }
            await createNode({
                id: subcategory._id,
@@ -102,6 +104,7 @@ exports.sourceNodes = async ({ actions, createContentDigest, createNodeId}) => {
                title: item.title,
                description: item.description,
                price: item.price,
+               order: item.order,
                parent: item.parent,
                internal: {
                    type: `Item`,

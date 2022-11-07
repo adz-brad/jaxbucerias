@@ -25,7 +25,7 @@ query GetSubcategories($parent: String!) {
 
 export const itemsQuery = gql`
 query GetItems($parent: String!) {
-  items(query: { parent: $parent }) {
+  items(query: { parent: $parent }, sortBy: ORDER_ASC) {
     _id
     title {
       en
@@ -37,6 +37,7 @@ query GetItems($parent: String!) {
       sp
     }
     parent
+    order
   }
 }`
 

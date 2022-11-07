@@ -14,6 +14,7 @@ export const insertMenuItem = gql`
         sp
       }
       parent
+      order
     }
   }
 `
@@ -44,32 +45,45 @@ export const insertSubcategory = gql`
 `
 
 export const updateMenuItem = gql`
-  mutation($set: ItemUpdateInput!){
-    updateOneItem(set: $set){
+  mutation($query: ItemQueryInput, $set: ItemUpdateInput!){
+    updateOneItem(query: $query, set: $set){
       _id
-      title
+      title {
+        en
+        sp
+      }
       price
-      description
+      description {
+        en
+        sp
+      }
       parent
+      order
     }
   }
 `
 
 export const updateSubcategory = gql`
-  mutation($set: SubcategoryUpdateInput!){
-    updateOneSubcategory(set: $set){
+  mutation($query: ItemQueryInput, $set: SubcategoryUpdateInput!){
+    updateOneSubcategory(query: $query, set: $set){
       _id
-      title
+      title {
+        en
+        sp
+      }
       parent
     }
   }
 `
 
 export const updateCategory = gql`
-  mutation($set: CategoryUpdateInput!){
-    updateOneCategory(set: $set){
+  mutation($query: CategoryQueryInput, $set: CategoryUpdateInput!){
+    updateOneCategory(query: $query, set: $set){
       _id
-      title
+      title {
+        en
+        sp
+      }
     }
   }
 `
@@ -78,10 +92,17 @@ export const deleteMenuItem = gql`
   mutation($query: ItemQueryInput!){
     deleteOneItem(query: $query){
       _id
-      title
+      title {
+        en
+        sp
+      }
       price
-      description
+      description {
+        en
+        sp
+      }
       parent
+      order
     }
   }
 `
@@ -99,7 +120,10 @@ export const deleteSubcategory = gql`
   mutation($query: SubcategoryQueryInput!){
     deleteOneSubcategory(query: $query){
       _id
-      title
+      title {
+        en
+        sp
+      }
       parent
     }
   }

@@ -18,6 +18,8 @@ const Categories = () => {
         }
     }, [ data ])
 
+    console.log(data)
+
     const setModal = useSetRecoilState(modalState)
 
     const addCategory = () => {
@@ -52,6 +54,9 @@ const Categories = () => {
                     </li>
                 </ul>
             )
+        }
+        else {
+            return null
         }
 }
 
