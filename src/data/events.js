@@ -77,18 +77,18 @@ export const bands = [
         image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1670365659/Jax%20Bucerias/PHOTO-2022-12-06-16-16-17_cfx1j9.jpg"
     },
     {
-        title: "ZOMA",
-        day: "Sunday",
-        time: "9:00 PM",
-        description: "",
-        image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1667406346/Jax%20Bucerias/zoma_czmjox.jpg"
-    },
-    {
         title: "The Gecko Band",
         day: "Sunday",
         time: "5:00 PM",
         description: "",
         image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1667406347/Jax%20Bucerias/gecko-band_rrbdxi.jpg"
+    },
+    {
+        title: "ZOMA",
+        day: "Sunday",
+        time: "9:00 PM",
+        description: "",
+        image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1667406346/Jax%20Bucerias/zoma_czmjox.jpg"
     },
 ]
 

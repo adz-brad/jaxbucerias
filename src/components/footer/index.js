@@ -7,7 +7,8 @@ const Footer = () => {
         <div className="z-10 flex flex-col md:flex-row bg-gradient-to-b from-zinc-900/0 to-zinc-900 via-zinc-900/90 p-8 mt-8 w-full max-w-screen-xxl mx-auto">
             <div className="flex flex-col md:w-1/2">
                 <h2 className="headers text-4xl mb-4">Hours</h2>
-                <ul className="flex flex-col mb-8 md:my-auto">
+                <div className="mb-8 md:my-auto">
+                <ul className="flex flex-col">
                     {hours ?
                         hours.map((day, i) => {
                             return(
@@ -26,6 +27,10 @@ const Footer = () => {
                         })
                     : null }
                 </ul>
+                <p className="text-sm font-semibold mt-4">
+                    * Jax is first come first serve, we do NOT accept reservations except for ticketed events. *
+                </p>
+                </div>
             </div>
             <div className="flex flex-col md:w-1/2">
                 <h2 className="headers text-4xl mb-4">Location</h2>
