@@ -186,10 +186,11 @@ const eventsToday = events.filter(event => event.day === days[today.getDay()])
                                         {event.title}
                                     </h3>
                                     <h4 className="uppercase">
-                                        {event.day}s at <strong>{event.time}</strong>
+                                        {event.day}{event.day === 'Saturday' ? null : 's' } 
+                                        at <strong>{event.time}</strong>
                                     </h4>
                                     <span className="my-4 sm:my-auto">
-                                        {event.description}. Doors open at 4:00 PM.
+                                        {event.description}{event.day === 'Saturday' ? null : '. Doors open at 4:00 PM.'}
                                     </span>
                                 </div>
                             </li>
