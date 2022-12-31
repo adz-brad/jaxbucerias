@@ -94,10 +94,33 @@ const eventsToday = events.filter(event => event.day === days[today.getDay()])
               <p className="my-2 text-lg">
                 Jax Bar & Grill in Bucerias, Nayarit, Mexico is your home for the best live music in Banderas Bay. With bands on the stage every day of the week, the party never stops at Jax, your #1 destination for entertainment and nightlife in Riviera Nayarit. So whether you want to rock out, dance like noone is watching or show off your smarts at our weekly Trivia night, there's something for everyone. Feeling hungry? Our menu is full fantastic snacks, appetizers and delicious meals to satisfy your cravings. And when it's time to wash it all down, the drinks are <b>ALWAYS</b> cold.
               </p>
-              <p className="my-2 text-xl font-bold uppercase">
+              <p className="my-2 text-xl font-bold uppercase text-center">
                 When the sun goes down, the party is just getting started at Jax!
               </p>
             </div>
+          <div className="flex flex-col">
+          <div className="my-8">
+            <h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4 items-center">
+              <div className="flex flex-col md:flex-row md:items-center">
+              <span className="text-neutral-100 md:mr-2">
+                Are You Ready?
+              </span>
+              Jax Rockin' NYE Party Is Back!
+              </div>
+            </h2>
+            <div className="flex md:flex-row md:items-center my-4">
+            <img 
+              className="md:w-1/4 mx-auto max-w-[300px]"
+              src="https://res.cloudinary.com/de6ty8wwf/image/upload/v1670365659/Jax%20Bucerias/PHOTO-2022-12-06-16-15-59_ij3in1.jpg" 
+              alt="Jax Rockin' NYE Party" 
+            />
+            <p className="my-2 text-lg md:w-2/3 mx-auto">
+            Come Rock 2022 one last time while ringing in the New Year the way only Jax can at our Rockin' NYE Party! Tickets are on sale NOW at Jax for $350 pesos and include party favours and champagne for our midnight toast. Seating is first come first serve. Doors open at 6 PM. No reservations.
+            </p>
+            </div>
+            
+          </div>
+          </div>
           <div className="flex flex-col">
             <div className="my-8">
             <h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4">

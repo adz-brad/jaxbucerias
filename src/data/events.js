@@ -100,4 +100,11 @@ export const events = [
         description: "Gather the gang and get competitive 5:00PM every Thursday at Jax! Form a team of 6 or less and get ready to battle it out for trivia supremacy!",
         image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1667406675/Jax%20Bucerias/trivia_n7f1of.jpg"
     },
+    {
+        title: "Jax Rockin' NYE Party",
+        day: "Saturday",
+        time: "6:00 PM",
+        description: "Come Rock 2022 one last time while ringing in the New Year the way only Jax can at our Rockin' NYE Party featuring THE GECKO BAND live on stage! Tickets are on sale NOW at Jax for $350 pesos and include party favours and champagne for our midnight toast. Seating is first come first serve. Doors open at 6 PM. No reservations.",
+        image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1670365659/Jax%20Bucerias/PHOTO-2022-12-06-16-15-59_ij3in1.jpg"
+    }
 ]
