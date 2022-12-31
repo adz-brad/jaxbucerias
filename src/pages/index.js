@@ -101,14 +101,14 @@ const eventsToday = events.filter(event => event.day === days[today.getDay()])
           <div className="flex flex-col">
           <div className="my-8">
             <h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4 items-center">
-              <div className="flex flex-col md:flex-row md:items-center">
+              <div className="flex flex-col md:flex-row md:items-center text-center">
               <span className="text-neutral-100 md:mr-2">
                 Are You Ready?
               </span>
               Jax Rockin' NYE Party Is Back!
               </div>
             </h2>
-            <div className="flex md:flex-row md:items-center my-4">
+            <div className="flex flex-col md:flex-row md:items-center my-4">
             <img 
               className="md:w-1/4 mx-auto max-w-[300px]"
               src="https://res.cloudinary.com/de6ty8wwf/image/upload/v1670365659/Jax%20Bucerias/PHOTO-2022-12-06-16-15-59_ij3in1.jpg" 
