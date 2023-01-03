@@ -75,14 +75,11 @@ const EventsDisplay = () => {
                                     <h3 className="headers text-3xl">
                                         {event.title}
                                     </h3>
-                                    
                                     <h4 className="uppercase">
-                                        {event.day}
-                                        {event.day === 'Saturday' ? null : 's' } 
-                                        at <strong>{event.time}</strong>
+                                        {event.day}. at <strong>{event.time}</strong>
                                     </h4>
                                     <span className="my-4 sm:my-auto">
-                                        {event.description}{event.day === 'Saturday' ? null : '. Doors open at 4:00 PM.'}
+                                        {event.description}. Doors open at 4:00 PM.
                                     </span>
                                 </div>
                             </li>
@@ -113,12 +110,10 @@ const EventsDisplay = () => {
                                         {event.title}
                                     </h3>
                                     <h4 className="uppercase">
-                                        {event.day}
-                                        {event.day === 'Saturday' ? null : 's' } 
-                                        at <strong>{event.time}</strong>
+                                        {event.day}. at <strong>{event.time}</strong>
                                     </h4>
                                     <span className="my-4 sm:my-auto">
-                                        {event.description}{event.day === 'Saturday' ? null : '. Doors open at 4:00 PM.'}
+                                        {event.description}. Doors open at 4:00 PM.
                                     </span>
                                 </div>
                             </li>

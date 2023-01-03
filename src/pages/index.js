@@ -99,29 +99,6 @@ const eventsToday = events.filter(event => event.day === days[today.getDay()])
               </p>
             </div>
           <div className="flex flex-col">
-          <div className="my-8">
-            <h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4 items-center">
-              <div className="flex flex-col md:flex-row md:items-center text-center">
-              <span className="text-neutral-100 md:mr-2">
-                Are You Ready?
-              </span>
-              Jax Rockin' NYE Party Is Back!
-              </div>
-            </h2>
-            <div className="flex flex-col md:flex-row md:items-center my-4">
-            <img 
-              className="md:w-1/4 mx-auto max-w-[300px]"
-              src="https://res.cloudinary.com/de6ty8wwf/image/upload/v1670365659/Jax%20Bucerias/PHOTO-2022-12-06-16-15-59_ij3in1.jpg" 
-              alt="Jax Rockin' NYE Party" 
-            />
-            <p className="my-2 text-lg md:w-2/3 mx-auto">
-            Come Rock 2022 one last time while ringing in the New Year the way only Jax can at our Rockin' NYE Party! Tickets are on sale NOW at Jax for $350 pesos and include party favours and champagne for our midnight toast. Seating is first come first serve. Doors open at 6 PM. No reservations.
-            </p>
-            </div>
-            
-          </div>
-          </div>
-          <div className="flex flex-col">
             <div className="my-8">
             <h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4">
                 Live On Stage Today 
@@ -186,11 +163,10 @@ const eventsToday = events.filter(event => event.day === days[today.getDay()])
                                         {event.title}
                                     </h3>
                                     <h4 className="uppercase">
-                                        {event.day}{event.day === 'Saturday' ? null : 's' } 
-                                        at <strong>{event.time}</strong>
+                                        {event.day}. at <strong>{event.time}</strong>
                                     </h4>
                                     <span className="my-4 sm:my-auto">
-                                        {event.description}{event.day === 'Saturday' ? null : '. Doors open at 4:00 PM.'}
+                                        {event.description}. Doors open at 4:00 PM.
                                     </span>
                                 </div>
                             </li>
