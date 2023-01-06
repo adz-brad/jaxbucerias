@@ -60,7 +60,7 @@ const Menu = ({ data }) => {
             <>
               {category.title.en === 'Pizza' ?
                 <div className="flex flex-col md:flex-row items-center md:justify-center my-2 md:my-0 text-3xl uppercase headers">
-                  <div className="flex flex-row md:my-2">
+                  <div className="flex flex-row md:my-2 md:mr-4">
                     <span className="mr-2">
                       Medium 10"
                     </span>
