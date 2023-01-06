@@ -58,6 +58,6 @@ require("dotenv").config()
         head: false
       },
     },
-    'gatsby-plugin-preact'
+    //'gatsby-plugin-preact'
   ],
 }

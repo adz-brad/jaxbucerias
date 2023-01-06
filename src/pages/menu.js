@@ -13,8 +13,6 @@ const Menu = ({ data }) => {
     setSubCategory(category ? category.subcategories ? category.subcategories[0] : null : null)
   }, [ category ])
 
-  console.log(subCategory)
-
   return(
 
     <div className="flex flex-col w-full md:my-4 px-4">
@@ -22,7 +20,7 @@ const Menu = ({ data }) => {
                 Menu
             </h1>
       {menu ?
-        <ul className="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-4 mt-4 md:mb-2">
+        <ul className="grid grid-cols-1 md:grid-cols-4 gap-1 md:gap-4 mt-4 md:mb-2">
           {menu.map((item, i) => {
             return(
               <li 
@@ -59,11 +57,33 @@ const Menu = ({ data }) => {
             )})}
             </ul>
             : category.items.length > 0 ?
+            <>
+              {category.title.en === 'Pizza' ?
+                <div className="flex flex-col md:flex-row items-center md:justify-center my-2 md:my-0 text-3xl uppercase headers">
+                  <div className="flex flex-row md:my-2">
+                    <span className="mr-2">
+                      Medium 10"
+                    </span>
+                    <span className="text-green-600">
+                      $165
+                    </span>
+                  </div>
+                  <div className="flex flex-row md:my-2">
+                    <span className="mr-2">
+                      Large 14"
+                    </span>
+                    <span className="text-green-600">
+                      $225
+                    </span>
+                  </div>
+                </div>
+              : null }
               <ul className="bg-zinc-900/60 grid grid-cols-1 md:grid-cols-2 md:gap-2 lg:grid-cols-3 xl:grid-cols-4">
                 {category.items.map((item, i) => {
-                  return <MenuItem key={i} _key={i} item={item} />
+                  return <MenuItem category={category.title.en} key={i} _key={i} item={item} />
                 })}
               </ul> 
+              </>
             : null 
       : null }
       { subCategory ?
