@@ -1,10 +1,10 @@
 export const bands = [
     {
-        title: "Las Mambas",
+        title: "Monaco by Daniel Celis",
         day: "Monday",
         time: "5:00 PM",
         description: "",
-        image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1667406347/Jax%20Bucerias/las-mambas_x8roze.jpg"
+        image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1676088445/Jax%20Bucerias/daniel-celis-monaco_nbtzju.jpg"
     },
     {
         title: "The Lovers",
