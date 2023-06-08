@@ -1,8 +1,8 @@
 export const hours = [
     {
         day: "Monday",
-        open: "4:00 PM",
-        closed: "2:00 AM",
+        open: "CLOSED",
+        closed: "CLOSED",
     },
     {
         day: "Tuesday",
@@ -31,7 +31,7 @@ export const hours = [
     },
     {
         day: "Sunday",
-        open: "4:00 PM",
-        closed: "2:00 AM",
+        open: "CLOSED",
+        closed: "CLOSED",
     },
 ]
