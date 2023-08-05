@@ -13,13 +13,13 @@ export const bands = [
         description: "",
         image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1686189133/Jax%20Bucerias/alien-project_pao6tl.jpg"
     },
-        {
-        title: "Chris & Jedda",
-        day: "Thursday",
-        time: "5:00 PM",
-        description: "",
-        image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1686189134/Jax%20Bucerias/chris-jedda_wnpsmo.jpg"
-    },
+//        {
+//        title: "Chris & Jedda",
+//        day: "Thursday",
+//        time: "5:00 PM",
+//        description: "",
+//        image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1686189134/Jax%20Bucerias/chris-jedda_wnpsmo.jpg"
+//    },
     {
         title: "Three Circus",
         day: "Thursday",
@@ -27,13 +27,13 @@ export const bands = [
         description: "",
         image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1667406347/Jax%20Bucerias/three-circus_d1iaxs.jpg"
     },
-    {
-        title: "THe Availables",
-        day: "Friday",
-        time: "5:00 PM",
-        description: "",
-        image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1667406347/Jax%20Bucerias/the-availables_zejbgq.jpg"
-    },
+//    {
+//        title: "THe Availables",
+//        day: "Friday",
+//        time: "5:00 PM",
+//        description: "",
+//        image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1667406347/Jax%20Bucerias/the-availables_zejbgq.jpg"
+//    },
     {
         title: "The IVM",
         day: "Friday",
