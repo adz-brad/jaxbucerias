@@ -6,17 +6,17 @@ export const hours = [
     },
     {
         day: "Tuesday",
-        open: "4:00 PM",
+        open: "6:00 PM",
         closed: "2:00 AM",
     },
     {
         day: "Wednesday",
-        open: "4:00 PM",
+        open: "6:00 PM",
         closed: "2:00 AM",
     },
     {
         day: "Thursday",
-        open: "4:00 PM",
+        open: "6:00 PM",
         closed: "2:00 AM",
     },
     {
