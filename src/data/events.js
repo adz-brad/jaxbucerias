@@ -98,14 +98,14 @@ export const events = [
         day: "Thursday",
         time: "5:00 PM",
         //description: "Trivia is on PAUSE for the summer - study hard and we will see everyone in the fall for Trivia Night at Jax!",
-        description: "Trivia is BACK!! Gather the gang and get competitive 5:00PM every Thursday at Jax! Form a team of 6 or less and get ready to battle it out for trivia supremacy! Note: There will be no trivia Thursday Nov 2 as we are hosting the Dia De Muertos Fiesta fundraiser.",
+        description: "Trivia is BACK!! Gather the gang and get competitive 5:00PM every Thursday at Jax! Form a team of 6 or less and get ready to battle it out for trivia supremacy! Note: There will be no trivia Thursday November 2 as we are hosting the Dia De Muertos Fiesta fundraiser.",
         image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1667406675/Jax%20Bucerias/trivia_n7f1of.jpg"
     },
     {
         title: "Dia de Muertos Fiesta",
         day: "Thursday",
         time: "4:00 PM",
-        description: "Thursday Nov 2 we are hosting the Dia De Muertos Fiesta fundraiser for the John Ozzello Memorial Food Bank. Featuring live music, prizes and 50/50 draw. Cover $200 pesos.",
+        description: "Thursday November 2 we are hosting the Dia De Muertos Fiesta fundraiser for the John Ozzello Memorial Food Bank. Featuring live music, prizes and 50/50 draw. Cover $200 pesos.",
         image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1697751634/Jax%20Bucerias/halloween-fiesta_fxip3y.jpg"
     }
 ]

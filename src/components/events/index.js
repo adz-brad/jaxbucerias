@@ -110,7 +110,7 @@ const EventsDisplay = () => {
                                         {event.title}
                                     </h3>
                                     <h4 className="uppercase">
-                                        {event.day}. at <strong>{event.time}</strong>
+                                        {event.day} at <strong>{event.time}</strong>
                                     </h4>
                                     <span className="my-4 sm:my-auto">
                                         {event.description}. Doors open at 4:00 PM.
