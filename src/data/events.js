@@ -55,27 +55,27 @@ export const bands = [
         description: "",
         image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1667406347/Jax%20Bucerias/the-availables_zejbgq.jpg"
     },
-    {
-        title: "The Lobsters",
-        day: "Friday",
-        time: "9:00 PM",
-        description: "",
-        image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1697752073/Jax%20Bucerias/the-lobsters_ojm8e7.jpg"
-    },
     //{
-    //    title: "The B34ST",
+    //    title: "The Lobsters",
     //    day: "Friday",
     //    time: "9:00 PM",
     //    description: "",
-    //    image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1667406347/Jax%20Bucerias/the-b34st_t8i5y4.jpg"
+    //    image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1697752073/Jax%20Bucerias/the-lobsters_ojm8e7.jpg"
     //},
-    //{
-    //    title: "Rock of Ages",
-    //    day: "Saturday",
-    //    time: "5:00 PM",
-    //    description: "",
-    //    image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1667406347/Jax%20Bucerias/roar_svt8z0.jpg"
-    //},
+    {
+        title: "The B34ST",
+        day: "Friday",
+        time: "9:00 PM",
+        description: "",
+        image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1667406347/Jax%20Bucerias/the-b34st_t8i5y4.jpg"
+    },
+    {
+        title: "Rock of Ages",
+        day: "Saturday",
+        time: "5:00 PM",
+        description: "",
+        image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1667406347/Jax%20Bucerias/roar_svt8z0.jpg"
+    },
     {
         title: "Calavera Beach",
         day: "Saturday",
@@ -83,13 +83,13 @@ export const bands = [
         description: "",
         image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1686189794/Jax%20Bucerias/calavera-beach-thumbnail_uexjuc.png"
     },
-    //{
-    //    title: "Gecko Band",
-    //    day: "Sunday",
-    //    time: "5:00 PM",
-    //    description: "",
-    //    image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1667406347/Jax%20Bucerias/gecko-band_rrbdxi.jpg"
-    //},
+    {
+        title: "Gecko Band",
+        day: "Sunday",
+        time: "5:00 PM",
+        description: "",
+        image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1667406347/Jax%20Bucerias/gecko-band_rrbdxi.jpg"
+    },
 ]
 
 export const events = [
@@ -100,12 +100,5 @@ export const events = [
         //description: "Trivia is on PAUSE for the summer - study hard and we will see everyone in the fall for Trivia Night at Jax!",
         description: "Trivia is BACK!! Gather the gang and get competitive 5:00PM every Thursday at Jax! Form a team of 6 or less and get ready to battle it out for trivia supremacy! Note: There will be no trivia Thursday November 2 as we are hosting the Dia De Muertos Fiesta fundraiser.",
         image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1667406675/Jax%20Bucerias/trivia_n7f1of.jpg"
-    },
-    {
-        title: "Dia de Muertos Fiesta",
-        day: "Thursday",
-        time: "4:00 PM",
-        description: "Thursday November 2 we are hosting the Dia De Muertos Fiesta fundraiser for the John Ozzello Memorial Food Bank. Featuring live music, prizes and 50/50 draw. Cover $200 pesos.",
-        image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1697751634/Jax%20Bucerias/halloween-fiesta_fxip3y.jpg"
     }
 ]
