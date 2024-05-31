@@ -37,9 +37,9 @@ const BandsDisplay = () => {
         return day
     }
 
-    const scheduledToday = bands.filter(band => band.day === days[today.getDay()])
-    const scheduledTomorrow = bands.filter(band => band.day === days[tomorrow.getDay()])
-    const scheduledRest = bands.filter(band => band.day !== days[today.getDay()] && band.day !== days[tomorrow.getDay()])
+    //const scheduledToday = bands.filter(band => band.day === days[today.getDay()])
+    //const scheduledTomorrow = bands.filter(band => band.day === days[tomorrow.getDay()])
+    //const scheduledRest = bands.filter(band => band.day !== days[today.getDay()] && band.day !== days[tomorrow.getDay()])
 
     const getRange = (date) => {
         let d1 = new Date(date)
@@ -54,7 +54,15 @@ const BandsDisplay = () => {
             <h1 className="headers text-6xl">
                 Bands
             </h1>
-            <div className="my-4">
+            <div className="bg-zinc-900/70">
+            <h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4">
+                Summer 2024
+                    <a className="text text-xl text-neutral-100 uppercase font-bold" href="https://www.facebook.com/JaxBucerias/" target='_blank'>
+                        Check Facebook For Band Schedule
+                    </a>
+            </h2>
+            </div>
+            {/*<div className="my-4">
             <h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4">
                 Live On Stage Today 
                 <span className="text text-xl text-neutral-100 uppercase font-bold">
@@ -156,7 +164,7 @@ const BandsDisplay = () => {
                     })
                 : <>No Bands Scheduled</> }
             </ul>
-            </div>
+                </div>*/}
         </div>
         
     )

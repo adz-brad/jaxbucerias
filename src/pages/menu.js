@@ -4,22 +4,30 @@ import MenuItem from '../components/menuItem'
 
 const Menu = ({ data }) => {
 
-  const menu = data.menu.categories
+  //const menu = data.menu.categories
 
-  const [ category, setCategory ] = useState(menu ? menu[0] : null)
-  const [ subCategory, setSubCategory ] = useState(category ? category.subcategories ? category.subcategories[0] : null : null)
+  //const [ category, setCategory ] = useState(menu ? menu[0] : null)
+  //const [ subCategory, setSubCategory ] = useState(category ? category.subcategories ? category.subcategories[0] : null : null)
 
-  useEffect(() => {
-    setSubCategory(category ? category.subcategories ? category.subcategories[0] : null : null)
-  }, [ category ])
+  //useEffect(() => {
+  //  setSubCategory(category ? category.subcategories ? category.subcategories[0] : null : null)
+  //}, [ category ])
 
   return(
 
     <div className="flex flex-col w-full md:my-4 px-4">
       <h1 className="headers text-6xl">
-                Menu
-            </h1>
-      {menu ?
+        Menu
+      </h1>
+      <div className="bg-zinc-900/70">
+            <h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4">
+                Summer 2024
+                    <a className="text text-xl text-neutral-100 uppercase font-bold" href="https://www.facebook.com/JaxBucerias/" target='_blank'>
+                        Summer menu available at Jax. Check Facebook For Specials.
+                    </a>
+            </h2>
+            </div>
+      {/*menu ?
         <ul className="grid grid-cols-1 md:grid-cols-4 gap-1 md:gap-4 mt-4 md:mb-2">
           {menu.map((item, i) => {
             return(
@@ -113,7 +121,7 @@ const Menu = ({ data }) => {
             </ul>
           : null }
         </>
-      : null }
+            : null */}
     </div>
     
   )

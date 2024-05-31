@@ -46,8 +46,8 @@ const getDay = (date) => {
   return day
 }
 
-const bandsToday = bands.filter(band => band.day === days[today.getDay()])
-const eventsToday = events.filter(event => event.day === days[today.getDay()])
+//const bandsToday = bands.filter(band => band.day === days[today.getDay()])
+//const eventsToday = events.filter(event => event.day === days[today.getDay()])
 
   return(
 
@@ -100,7 +100,7 @@ const eventsToday = events.filter(event => event.day === days[today.getDay()])
             </div>
           <div className="flex flex-col">
             <div className="my-8">
-            <h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4">
+            {/*<h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4">
                 Live On Stage Today 
                 <span className="text text-xl text-neutral-100 uppercase font-bold">
                     {getDay(today)}
@@ -132,7 +132,7 @@ const eventsToday = events.filter(event => event.day === days[today.getDay()])
                         )
                     })
                 : <>No Bands Scheduled</> }
-            </ul>
+            </ul>*/}
             <Link
               to="bands"
               className="headers text-2xl flex flex-col items-center w-full max-w-screen-sm mx-auto px-2 py-3 hover:bg-neutral-100 hover:text-neutral-900 bg-red-600 text-neutral-100 transition-colors mt-8 mb-4"
@@ -140,7 +140,7 @@ const eventsToday = events.filter(event => event.day === days[today.getDay()])
               See Band Schedule
             </Link>
             </div>
-            <div className="my-8">
+            {/*<div className="my-8">
             <h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4">
                 Today's Events
                 <span className="text text-xl text-neutral-100 uppercase font-bold">
@@ -180,7 +180,7 @@ const eventsToday = events.filter(event => event.day === days[today.getDay()])
             >
               See Event Schedule
             </Link>
-            </div>
+                  </div>*/}
           </div>
         </div>
        </div>
