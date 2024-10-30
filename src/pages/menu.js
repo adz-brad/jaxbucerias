@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { graphql } from "gatsby"
 import MenuItem from '../components/menuItem'
 
-const Menu = ({ data }) => {
+const Menu = () => {
 
   //const menu = data.menu.categories
 
@@ -138,65 +138,3 @@ export const Head = () => {
     </>
   )
 }
-
-export const pageQuery = graphql`
-query {
-  menu: allCategory {
-    categories: nodes {
-      title {
-        en
-        sp
-      }
-      items: childrenItem {
-        title {
-          en
-          sp
-        }
-        price
-        description {
-          en
-          sp
-        }
-        order
-      }
-      subcategories: childrenSubcategory {
-        title {
-          en
-          sp
-        }
-        items: childrenItem {
-          title {
-            en
-            sp
-          }
-          price
-          description {
-            en
-            sp
-          }
-          order
-        }
-        subcategories: childrenSubcategory {
-          title {
-            en
-            sp
-          }
-          items: childrenItem {
-            title {
-              en
-              sp
-            }
-            price
-            description {
-              en
-              sp
-            }
-            order
-          }
-        }
-      }
-    }
-  }
-}
-
-`
