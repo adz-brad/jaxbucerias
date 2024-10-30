@@ -33,35 +33,35 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
         endpoint: process.env.GATSBY_REALM_GQL_ENDPOINT,
         query: "{\r\n    categories {\r\n        _id\r\n        title {\r\n            en\r\n            sp\r\n        }\r\n    }\r\n}",
         variables: {},
-    }).then(res => { return res.data.categories })
+    }).then(res => { return res?.data?.categories })
 
     const subcategories = await fetchData({
         endpoint: process.env.GATSBY_REALM_GQL_ENDPOINT,
         query: "{\r\n    subcategories {\r\n        _id\r\n        title {\r\n            en\r\n            sp\r\n        }\r\n        parent\r\n    }\r\n}",
         variables: {},
-    }).then(res => { return res.data.subcategories })
+    }).then(res => { return res?.data?.subcategories })
 
     const items = await fetchData({
         endpoint: process.env.GATSBY_REALM_GQL_ENDPOINT,
         query: "{\r\n    items(limit: 1000) {\r\n        _id\r\n        title {\r\n            en\r\n            sp\r\n        }\r\n        price\r\n        description {\r\n            en\r\n            sp\r\n        }\r\n        parent\r\n    order\r\n }\r\n}",
         variables: {},
-    }).then(res => { return res.data.items })
+    }).then(res => { return res?.data?.items })
 
     if(categories){
      categories.forEach(async(category) => {
         let children = [] 
         if(subcategories){
-            const filtered = subcategories.filter(subcategory => subcategory.parent === category._id)
-            filtered.map(item => children.push(item._id))
+            const filtered = subcategories?.filter(subcategory => subcategory.parent === category._id)
+            filtered?.map(item => children?.push(item._id))
         }
         if(items){
-            const filteredItems = items.filter(item => item.parent === category._id)
-            const sortedItems = filteredItems.sort((a, b) => a.order > b.order ? 1 : -1)
-            sortedItems.map(item => children.push(item._id))
+            const filteredItems = items?.filter(item => item?.parent === category._id)
+            const sortedItems = filteredItems?.sort((a, b) => a.order > b.order ? 1 : -1)
+            sortedItems?.map(item => children?.push(item._id))
         }
         await createNode({
-            id: category._id,
-            title: category.title,
+            id: category?._id,
+            title: category?.title,
             parent: null,
             children: children,
             internal: {
@@ -76,17 +76,17 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
     if(subcategories){
         subcategories.forEach(async(subcategory) => {
             let children = []
-            const filteredSubcategories = subcategories.filter(subcat => subcat.parent === subcategory._id)
-            filteredSubcategories.map(item => children.push(item._id))
+            const filteredSubcategories = subcategories?.filter(subcat => subcat?.parent === subcategory?._id)
+            filteredSubcategories?.map(item => children?.push(item._id))
             if(items){
-                const filteredItems = items.filter(item => item.parent === subcategory._id)
-                const sortedItems = filteredItems.sort((a, b) => a.order > b.order ? 1 : -1)
-                sortedItems.map(item => children.push(item._id))
+                const filteredItems = items?.filter(item => item?.parent === subcategory._id)
+                const sortedItems = filteredItems?.sort((a, b) => a?.order > b?.order ? 1 : -1)
+                sortedItems.map(item => children?.push(item._id))
             }
            await createNode({
-               id: subcategory._id,
-               title: subcategory.title,
-               parent: subcategory.parent,
+               id: subcategory?._id,
+               title: subcategory?.title,
+               parent: subcategory?.parent,
                children: children,
                internal: {
                    type: `Subcategory`,
@@ -100,12 +100,12 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
        if(items){
         items.forEach(async(item) => {
            await createNode({
-               id: item._id,
-               title: item.title,
-               description: item.description,
-               price: item.price,
-               order: item.order,
-               parent: item.parent,
+               id: item?._id,
+               title: item?.title,
+               description: item?.description,
+               price: item?.price,
+               order: item?.order,
+               parent: item?.parent,
                internal: {
                    type: `Item`,
                    content: JSON.stringify(item),
