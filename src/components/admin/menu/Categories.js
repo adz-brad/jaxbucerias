@@ -10,7 +10,7 @@ const Categories = () => {
 
     const [ category, setCategory ] = useRecoilState(categoryState)
     const locale = useRecoilValue(localeState)
-    const { data } = useQuery(categoriesQuery)
+    const { data } = null //useQuery(categoriesQuery)
 
     useEffect(() => {
         if(data){
@@ -18,7 +18,6 @@ const Categories = () => {
         }
     }, [ data ])
 
-    console.log(data)
 
     const setModal = useSetRecoilState(modalState)
 

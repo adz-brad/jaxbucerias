@@ -1,54 +1,54 @@
 import React, { useState } from "react"
-import * as Realm from "realm-web"
-import Editor from "../components/admin/editor"
-import { ToastContainer } from "react-toastify"
+//import * as Realm from "realm-web"
+//import Editor from "../components/admin/editor"
+//import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.min.css"
 
 const Admin = () => {
 
 // ADMIN PAGE
 
-  const app = new Realm.App({ id: process.env.GATSBY_REALM_APP_ID })
-
-  const [credentials, setCredentials] = useState({ email: "", password: "" })
-  const [user, setUser] = useState(app.currentUser)
-  const [editor, setEditor] = useState(null)
-
-  const login = async () => {
-    const realmCredentials = Realm.Credentials.emailPassword(
-      credentials.email,
-      credentials.password
-    )
-    if (credentials.email.length !== 0 && credentials.password.length !== 0) {
-      try {
-        const user = await app.logIn(realmCredentials)
-        setUser(user)
-        setCredentials({ email: "", password: "" })
-      } catch (err) {
-        console.error("Failed to log in", err)
-      }
-    }
-  }
-
-  const logout = async () => {
-    const userId = app.currentUser.id
-    const user = await app.allUsers[userId].logOut()
-    setUser(user)
-  }  
-  
-  const publish = async () => {
-    const endpoint = process.env.GATSBY_NETLIFY_BUILD_HOOK
-    const requestOptions = {
-        method: 'POST',
-        redirect: 'manual'
-      };
-    await fetch(endpoint, requestOptions)
-        .then(response => console.log('Build hook response:', response))
-  }
+  //const app = new Realm.App({ id: process.env.GATSBY_REALM_APP_ID })
+//
+  //const [credentials, setCredentials] = useState({ email: "", password: "" })
+  //const [user, setUser] = useState(app.currentUser)
+  //const [editor, setEditor] = useState(null)
+//
+  //const login = async () => {
+  //  const realmCredentials = Realm.Credentials.emailPassword(
+  //    credentials.email,
+  //    credentials.password
+  //  )
+  //  if (credentials.email.length !== 0 && credentials.password.length !== 0) {
+  //    try {
+  //      const user = await app.logIn(realmCredentials)
+  //      setUser(user)
+  //      setCredentials({ email: "", password: "" })
+  //    } catch (err) {
+  //      console.error("Failed to log in", err)
+  //    }
+  //  }
+  //}
+//
+  //const logout = async () => {
+  //  const userId = app.currentUser.id
+  //  const user = await app.allUsers[userId].logOut()
+  //  setUser(user)
+  //}  
+  //
+  //const publish = async () => {
+  //  const endpoint = process.env.GATSBY_NETLIFY_BUILD_HOOK
+  //  const requestOptions = {
+  //      method: 'POST',
+  //      redirect: 'manual'
+  //    };
+  //  await fetch(endpoint, requestOptions)
+  //      .then(response => console.log('Build hook response:', response))
+  //}
 
     return (
             <div className="fixed w-screen h-screen top-0 left-0">
-                <ToastContainer
+                {/*<ToastContainer
                     position="bottom-right"
                     autoClose={4000}
                     hideProgressBar={true}
@@ -160,7 +160,7 @@ const Admin = () => {
                         </button>
                     </div>
 
-                }
+                */}
 
             </div>
             
