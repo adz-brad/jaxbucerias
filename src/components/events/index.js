@@ -1,5 +1,5 @@
 import React from 'react'
-//import { events } from '../../data/events'
+import { events } from '../../data/events'
 
 const EventsDisplay = () => {
 
@@ -37,9 +37,9 @@ const EventsDisplay = () => {
         return day
     }
 
-    //const scheduledToday = events.filter(event => event.day === days[today.getDay()])
-    //const scheduledTomorrow = events.filter(event => event.day === days[tomorrow.getDay()])
-    //const scheduledRest = events.filter(event => event.day !== days[today.getDay()] && event.day !== days[tomorrow.getDay()])
+    const scheduledToday = events.filter(event => event.day === days[today.getDay()])
+    const scheduledTomorrow = events.filter(event => event.day === days[tomorrow.getDay()])
+    const scheduledRest = events.filter(event => event.day !== days[today.getDay()] && event.day !== days[tomorrow.getDay()])
 
     const getRange = (date) => {
         let d1 = new Date(date)
@@ -55,14 +55,6 @@ const EventsDisplay = () => {
                 Events
             </h1>
             <div className="bg-zinc-900/70">
-            <h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4">
-                Summer 2024
-                    <a className="text text-xl text-neutral-100 uppercase font-bold" href="https://www.facebook.com/JaxBucerias/" target='_blank'>
-                        Check Facebook For Events
-                    </a>
-            </h2>
-            </div>
-            {/*<div className="bg-zinc-900/70">
             <h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4">
                 Today at Jax 
                 <span className="text text-xl text-neutral-100 uppercase font-bold">
@@ -163,7 +155,7 @@ const EventsDisplay = () => {
                     })
                 : <>No Events Scheduled</> }
             </ul>
-            </div>*/}
+            </div>
         </div>
         
     )

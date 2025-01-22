@@ -46,8 +46,8 @@ const getDay = (date) => {
   return day
 }
 
-//const bandsToday = bands.filter(band => band.day === days[today.getDay()])
-//const eventsToday = events.filter(event => event.day === days[today.getDay()])
+const bandsToday = bands?.filter(band => band?.day === days[today?.getDay()])
+const eventsToday = events?.filter(event => event?.day === days[today?.getDay()])
 
   return(
 
@@ -100,15 +100,15 @@ const getDay = (date) => {
             </div>
           <div className="flex flex-col">
             <div className="my-8">
-            {/*<h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4">
+            <h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4">
                 Live On Stage Today 
                 <span className="text text-xl text-neutral-100 uppercase font-bold">
                     {getDay(today)}
                 </span>
             </h2>
             <ul className="grid grid-cols-1 gap-2 my-4">
-                {bandsToday.length > 0 ?
-                    bandsToday.map((band, i) => {
+                {bandsToday?.length > 0 ?
+                    bandsToday?.map((band, i) => {
                         return(
                             <li key={i} className="flex flex-col sm:flex-row rounded-md shadow-md">
                                 <img 
@@ -132,7 +132,7 @@ const getDay = (date) => {
                         )
                     })
                 : <>No Bands Scheduled</> }
-            </ul>*/}
+            </ul>
             <Link
               to="bands"
               className="headers text-2xl flex flex-col items-center w-full max-w-screen-sm mx-auto px-2 py-3 hover:bg-neutral-100 hover:text-neutral-900 bg-red-600 text-neutral-100 transition-colors mt-8 mb-4"
@@ -140,7 +140,7 @@ const getDay = (date) => {
               See Band Schedule
             </Link>
             </div>
-            {/*<div className="my-8">
+            <div className="my-8">
             <h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4">
                 Today's Events
                 <span className="text text-xl text-neutral-100 uppercase font-bold">
@@ -148,14 +148,14 @@ const getDay = (date) => {
                 </span>
             </h2>
             <ul className="grid grid-cols-1 gap-2 my-4">
-                {eventsToday.length > 0 ?
-                    eventsToday.map((event, i) => {
+                {eventsToday?.length > 0 ?
+                    eventsToday?.map((event, i) => {
                         return(
                             <li key={i} className="flex flex-col sm:flex-row rounded-md shadow-md">
                                 <img 
                                     src={event.image} 
                                     loading="lazy"
-                                    alt={`${event.title} live on stage at Jax every ${event.day} at ${event.time}`} 
+                                    alt={`${event.title} at Jax on ${event.day} at ${event.time}`} 
                                     className="sm:max-h-[200px]"
                                 />
                                 <div className="flex flex-col py-4 px-2 sm:px-4">
@@ -180,7 +180,7 @@ const getDay = (date) => {
             >
               See Event Schedule
             </Link>
-                  </div>*/}
+            </div>
           </div>
         </div>
        </div>

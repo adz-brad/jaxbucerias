@@ -9,8 +9,8 @@ const Contact = () => {
                 Contact
             </h1>
 
-    <div className="my-8 flex flex-col md:h-[500px] items-center justify-center p-8 headers text-xl md:text-5xl">
-Under Construction
+    <div className="my-8 flex flex-col md:h-[500px] items-center justify-center p-8 headers text-xl md:text-2xl">
+To get in touch, please message us on Facebook.
     </div>
     </div>
     

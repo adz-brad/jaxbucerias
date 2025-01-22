@@ -8,8 +8,8 @@ const News = () => {
                 News
             </h1>
 
-    <div className="my-8 flex flex-col md:h-[500px] items-center justify-center p-8 headers text-xl md:text-5xl">
-Under Construction
+    <div className="my-8 flex flex-col md:h-[500px] items-center justify-center p-8 headers text-xl md:text-3xl">
+Check Facebook for the latest updates.
     </div>
     </div>
   )

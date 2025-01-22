@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react"
 import { graphql } from "gatsby"
 import MenuItem from '../components/menuItem'
+import { menu } from '../data/menu'
 
 const Menu = () => {
 
-  //const menu = data.menu.categories
+  const [ category, setCategory ] = useState(menu ? menu[0] : null)
+  const [ subCategory, setSubCategory ] = useState(category ? category?.subCategories ? category?.subCategories[0] : null : null)
 
-  //const [ category, setCategory ] = useState(menu ? menu[0] : null)
-  //const [ subCategory, setSubCategory ] = useState(category ? category.subcategories ? category.subcategories[0] : null : null)
-
-  //useEffect(() => {
-  //  setSubCategory(category ? category.subcategories ? category.subcategories[0] : null : null)
-  //}, [ category ])
+  useEffect(() => {
+    setSubCategory(category ? category?.subCategories ? category?.subCategories[0] : null : null)
+  }, [ category ])
 
   return(
 
@@ -19,15 +18,8 @@ const Menu = () => {
       <h1 className="headers text-6xl">
         Menu
       </h1>
-      <div className="bg-zinc-900/70">
-            <h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4">
-                Summer 2024
-                    <a className="text text-xl text-neutral-100 uppercase font-bold" href="https://www.facebook.com/JaxBucerias/" target='_blank'>
-                        Summer menu available at Jax. Check Facebook For Specials.
-                    </a>
-            </h2>
-            </div>
-      {/*menu ?
+
+      {menu ?
         <ul className="grid grid-cols-1 md:grid-cols-4 gap-1 md:gap-4 mt-4 md:mb-2">
           {menu.map((item, i) => {
             return(
@@ -39,7 +31,7 @@ const Menu = () => {
                   onClick={() => setCategory(item)}
                   className={`${category === item ? 'bg-red-600' : 'bg-neutral-100 text-zinc-900'} text-2xl md:text-3xl headers uppercase w-full my-1 md:my-0  rounded-sm shadow-md py-2 md:py-4`}
                 >
-                  {item.title.en}
+                  {item.title}
                 </button>
               </li>
             )
@@ -47,9 +39,9 @@ const Menu = () => {
         </ul>
       : null}
       { category ?
-            category.subcategories.length > 0 ?
+            category?.subCategories?.length > 0 ?
             <ul className="grid grid-cols-1 lg:grid-cols-5 lg:gap-2">
-              {category.subcategories.map((item, i) => {
+              {category?.subCategories?.map((item, i) => {
                 return(
                   <li 
                     key={i}
@@ -59,14 +51,14 @@ const Menu = () => {
                       onClick={() => setSubCategory(item)}
                       className={`${subCategory === item ? 'bg-red-600' : 'bg-neutral-100 text-zinc-900'} w-full mt-1 p-2 rounded-sm shadow-sm uppercase font-semibold`}
                     >
-                      {item.title.en}
+                      {item.title}
                     </button>
                   </li>
             )})}
             </ul>
-            : category.items.length > 0 ?
+            : category?.items?.length > 0 ?
             <>
-              {category.title.en === 'Pizza' ?
+              {category?.title === 'Pizza' ?
                 <div className="flex flex-col md:flex-row items-center md:justify-center my-2 md:my-0 text-3xl uppercase headers">
                   <div className="flex flex-row md:my-2 md:mr-4">
                     <span className="mr-2">
@@ -87,8 +79,8 @@ const Menu = () => {
                 </div>
               : null }
               <ul className="bg-zinc-900/60 grid grid-cols-1 md:grid-cols-2 md:gap-2 lg:grid-cols-3 xl:grid-cols-4">
-                {category.items.map((item, i) => {
-                  return <MenuItem category={category.title.en} key={i} _key={i} item={item} />
+                {category?.items.map((item, i) => {
+                  return <MenuItem category={category?.title} key={i} _key={i} item={item} />
                 })}
               </ul> 
               </>
@@ -96,15 +88,15 @@ const Menu = () => {
       : null }
       { subCategory ?
         <> 
-          {subCategory.subcategories.length > 0 ?
+          {subCategory?.subCategories?.length > 0 ?
           <ul className="bg-zinc-900/60">
-          {subCategory.subcategories.map((item, i) => {
+          {subCategory?.subCategories?.map((item, i) => {
             return(
               <li key={i} className="mb-8">
-                <h3 className="headers text-4xl mt-4 text-red-500">{item.title.en}</h3>
+                <h3 className="headers text-4xl mt-4 text-red-500">{item.title}</h3>
                 <ul className="grid grid-cols-1 md:grid-cols-2 md:gap-2 lg:grid-cols-3 xl:grid-cols-4">
                   {item.items ?
-                    item.items.map((item, i) => {
+                    item?.items?.map((item, i) => {
                       return <MenuItem key={i} _key={i} item={item} />
                     })
                   : null}
@@ -113,15 +105,15 @@ const Menu = () => {
             )
           })}
           </ul>
-          : subCategory.items.length > 0 ?
+          : subCategory?.items?.length > 0 ?
             <ul className="bg-zinc-900/60 grid grid-cols-1 md:grid-cols-2 md:gap-2 lg:grid-cols-3 xl:grid-cols-4">
-              {subCategory.items.map((item, i) => {
+              {subCategory?.items?.map((item, i) => {
                 return <MenuItem key={i} _key={i} item={item} />
               })}
             </ul>
           : null }
         </>
-            : null */}
+            : null }
     </div>
     
   )
