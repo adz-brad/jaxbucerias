@@ -19,7 +19,7 @@ const Menu = () => {
         Menu
       </h1>
 
-      {menu ?
+      {/*menu ?
         <ul className="grid grid-cols-1 md:grid-cols-4 gap-1 md:gap-4 mt-4 md:mb-2">
           {menu.map((item, i) => {
             return(
@@ -113,7 +113,7 @@ const Menu = () => {
             </ul>
           : null }
         </>
-            : null }
+            : null */}
     </div>
     
   )
