@@ -37,9 +37,9 @@ const BandsDisplay = () => {
         return day
     }
 
-    const scheduledToday = bands.filter(band => band.day === days[today.getDay()])
-    const scheduledTomorrow = bands.filter(band => band.day === days[tomorrow.getDay()])
-    const scheduledRest = bands.filter(band => band.day !== days[today.getDay()] && band.day !== days[tomorrow.getDay()])
+    const scheduledToday = bands?.filter(band => band?.day === days[today.getDay()])
+    const scheduledTomorrow = bands?.filter(band => band?.day === days[tomorrow.getDay()])
+    const scheduledRest = bands?.filter(band => band?.day !== days[today.getDay()] && band.day !== days[tomorrow.getDay()])
 
     const getRange = (date) => {
         let d1 = new Date(date)
@@ -62,8 +62,8 @@ const BandsDisplay = () => {
                 </span>
             </h2>
             <ul className="grid grid-cols-1 gap-2 my-4">
-                {scheduledToday.length > 0 ?
-                    scheduledToday.map((band, i) => {
+                {scheduledToday?.length > 0 ?
+                    scheduledToday?.map((band, i) => {
                         return(
                             <li key={i} className="flex flex-col sm:flex-row bg-zinc-900/70 rounded-sm shadow-md">
                                 <img 
@@ -86,7 +86,7 @@ const BandsDisplay = () => {
                             </li>
                         )
                     })
-                : <>No Bands Scheduled</> }
+                : <>Check Facebook During Summer</> }
             </ul>
             </div>
             <div className="my-4">
@@ -131,8 +131,8 @@ const BandsDisplay = () => {
                 </span>
             </h2>
             <ul className="grid grid-cols-1 lg:grid-cols-2 gap-2 my-4">
-                {scheduledRest.length > 0 ?
-                    scheduledRest.map((band, i) => {
+                {scheduledRest?.length > 0 ?
+                    scheduledRest?.map((band, i) => {
                         return(
                             <li key={i} className="flex flex-col sm:flex-row bg-zinc-900/70 rounded-sm shadow-md">
                                 <img 
@@ -154,7 +154,7 @@ const BandsDisplay = () => {
                             </li>
                         )
                     })
-                : <>No Bands Scheduled</> }
+                : <>Check Facebook During Summer</> }
             </ul>
                 </div>
         </div>

@@ -92,7 +92,7 @@ const eventsToday = events?.filter(event => event?.day === days[today?.getDay()]
             </h1>
             <div className="flex flex-col p-2">
               <p className="my-2 text-lg">
-                Jax Bar & Grill in Bucerias, Nayarit, Mexico is your home for the best live music in Banderas Bay. With bands on the stage every day of the week, the party never stops at Jax, your #1 destination for entertainment and nightlife in Riviera Nayarit. So whether you want to rock out, dance like noone is watching or show off your smarts at our weekly Trivia night, there's something for everyone. Feeling hungry? Our menu is full fantastic snacks, appetizers and delicious meals to satisfy your cravings. And when it's time to wash it all down, the drinks are <b>ALWAYS</b> cold.
+                Jax Bar & Grill in Bucerias, Nayarit, Mexico is your home for the best live music in Banderas Bay. With bands on the stage every day of the week, the party never stops at Jax, your #1 destination for entertainment and nightlife in Riviera Nayarit. So whether you want to rock out, dance like noone is watching or show off your smarts at Trivia night, there's something for everyone. Feeling hungry? Our menu is full fantastic snacks, appetizers and delicious meals to satisfy your cravings. And when it's time to wash it all down, the drinks are <b>ALWAYS</b> cold.
               </p>
               <p className="my-2 text-xl font-bold uppercase text-center">
                 When the sun goes down, the party is just getting started at Jax!
@@ -131,7 +131,7 @@ const eventsToday = events?.filter(event => event?.day === days[today?.getDay()]
                             </li>
                         )
                     })
-                : <>No Bands Scheduled</> }
+                : <>Check Facebook During Summer</> }
             </ul>
             <Link
               to="bands"
@@ -172,7 +172,7 @@ const eventsToday = events?.filter(event => event?.day === days[today?.getDay()]
                             </li>
                         )
                     })
-                : <>No Events Scheduled</> }
+                : <>Check Facebook During Summer</> }
             </ul>
             <Link
               to="events"
