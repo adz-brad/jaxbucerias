@@ -120,7 +120,7 @@ const BandsDisplay = () => {
                             </li>
                         )
                     })
-                : <>No Bands Scheduled</> }
+                : <>Check Facebook During Summer</> }
             </ul>
             </div>
             <div className="my-4">
