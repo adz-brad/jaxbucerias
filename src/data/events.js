@@ -98,7 +98,7 @@ export const events = [
         day: "Thursday",
         time: "5:00 PM",
         //description: "Trivia is on PAUSE for the summer - study hard and we will see everyone in the fall for Trivia Night at Jax!",
-        description: "Gather the gang and get competitive 5:00PM Thursdays at Jaxs! Form a team of 6 or less and get ready to battle it out for trivia supremacy and a free round of drinks for the winners!",
+        description: "Gather the gang and get competitive 5:00PM Thursdays at Jaxs! Form a team of 6 or less and get ready to battle it out for trivia supremacy and a free round of drinks for the winners! Except Jan 1 we are closed.",
         image: "https://res.cloudinary.com/de6ty8wwf/image/upload/v1737494323/Jax%20Bucerias/Trivia_gjxymr.png"
     },
 ]

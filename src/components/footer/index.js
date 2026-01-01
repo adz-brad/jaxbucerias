@@ -6,6 +6,27 @@ const Footer = () => {
     return(
         <div className="z-10 flex flex-col md:flex-row bg-gradient-to-b from-zinc-900/0 to-zinc-900 via-zinc-900/90 p-8 mt-8 w-full max-w-screen-xxl mx-auto">
             <div className="flex flex-col md:w-1/2">
+                <h2 className="headers text-4xl mb-4">Special Hours</h2>
+                <div className="mb-6">
+                    <ul className="flex flex-col mb-4">
+                        <li className="flex flex-row items-center">
+                            <span className="headers text-red-600 text-xl md:text-2xl">
+                                Dec 24/25
+                            </span>
+                            <span className="text-lg md:text-xl ml-2">
+                                CLOSED
+                            </span>
+                        </li>
+                        <li className="flex flex-row items-center">
+                            <span className="headers text-red-600 text-xl md:text-2xl">
+                                Jan 1
+                            </span>
+                            <span className="text-lg md:text-xl ml-2">
+                                CLOSED
+                            </span>
+                        </li>
+                    </ul>
+                </div>
                 <h2 className="headers text-4xl mb-4">Hours</h2>
                 <div className="mb-8 md:my-auto">
                 <ul className="flex flex-col">

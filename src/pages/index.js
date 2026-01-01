@@ -46,6 +46,8 @@ const getDay = (date) => {
   return day
 }
 
+const isJan1 = today.getMonth() === 0 && today.getDate() === 1
+
 const bandsToday = bands?.filter(band => band?.day === days[today?.getDay()])
 const eventsToday = events?.filter(event => event?.day === days[today?.getDay()])
 
@@ -98,6 +100,14 @@ const eventsToday = events?.filter(event => event?.day === days[today?.getDay()]
                 When the sun goes down, the party is just getting started at Jax!
               </p>
             </div>
+            <div className="my-8 p-4 border-2 border-neutral-600 rounded-lg">
+              <h2 className="headers text-3xl sm:text-4xl text-red-600 mb-4 text-center">
+                Happy New Year
+              </h2>
+              <p className="text-lg sm:text-xl text-center">
+                Looking forward to an amazing 2026. We are closed January 1. We will be back to normal hours starting January 2, see you soon!
+              </p>
+            </div>
           <div className="flex flex-col">
             <div className="my-8">
             <h2 className="flex flex-col headers text-4xl sm:text-5xl text-red-600 py-4">
@@ -107,7 +117,16 @@ const eventsToday = events?.filter(event => event?.day === days[today?.getDay()]
                 </span>
             </h2>
             <ul className="grid grid-cols-1 gap-2 my-4">
-                {bandsToday?.length > 0 ?
+                {isJan1 ? (
+                    <li className="flex flex-col items-center justify-center p-8 border-2 border-neutral-600 rounded-md">
+                        <p className="headers text-red-600 text-2xl sm:text-3xl text-center">
+                            Closed January 1
+                        </p>
+                        <p className="text-lg sm:text-xl text-center mt-2">
+                            We will be back to normal hours starting January 2, see you soon!
+                        </p>
+                    </li>
+                ) : bandsToday?.length > 0 ?
                     bandsToday?.map((band, i) => {
                         return(
                             <li key={i} className="flex flex-col sm:flex-row rounded-md shadow-md">
@@ -148,7 +167,16 @@ const eventsToday = events?.filter(event => event?.day === days[today?.getDay()]
                 </span>
             </h2>
             <ul className="grid grid-cols-1 gap-2 my-4">
-                {eventsToday?.length > 0 ?
+                {isJan1 ? (
+                    <li className="flex flex-col items-center justify-center p-8 border-2 border-neutral-600 rounded-md">
+                        <p className="headers text-red-600 text-2xl sm:text-3xl text-center">
+                            Closed January 1
+                        </p>
+                        <p className="text-lg sm:text-xl text-center mt-2">
+                            We will be back to normal hours starting January 2, see you soon!
+                        </p>
+                    </li>
+                ) : eventsToday?.length > 0 ?
                     eventsToday?.map((event, i) => {
                         return(
                             <li key={i} className="flex flex-col sm:flex-row rounded-md shadow-md">
