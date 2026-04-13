@@ -1,7 +1,36 @@
 import React from 'react'
 import { events } from '../../data/events'
 
+const FACEBOOK_URL = "https://www.facebook.com/JaxBucerias"
+
+const FacebookScheduleNotice = () => (
+    <div className="my-8 p-6 border-2 border-neutral-600 rounded-lg max-w-3xl">
+        <p className="text-lg sm:text-xl mb-4">
+            During the summer and low season we do not list events on this site. <strong>Check Facebook for the schedule</strong>—trivia, parties, and one-offs are posted there first.
+        </p>
+        <a
+            href={FACEBOOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="headers text-xl inline-block px-4 py-3 hover:bg-neutral-100 hover:text-neutral-900 bg-red-600 text-neutral-100 transition-colors rounded-sm"
+        >
+            Jax on Facebook
+        </a>
+    </div>
+)
+
 const EventsDisplay = () => {
+
+    if (!events?.length) {
+        return (
+            <div className="flex flex-col">
+                <h1 className="headers text-6xl">
+                    Events
+                </h1>
+                <FacebookScheduleNotice />
+            </div>
+        )
+    }
 
     const days = [
         'Sunday',
@@ -85,7 +114,7 @@ const EventsDisplay = () => {
                             </li>
                         )
                     })
-                : <>No Events Scheduled</> }
+                : <li className="p-4 text-lg">Check Facebook for the schedule.</li> }
             </ul>
             </div>
             <div className="bg-zinc-900/70">
@@ -119,7 +148,7 @@ const EventsDisplay = () => {
                             </li>
                         )
                     })
-                : <>No Events Scheduled</> }
+                : <li className="p-4 text-lg">Check Facebook for the schedule.</li> }
             </ul>
             </div>
             <div className="bg-zinc-900/70">
@@ -153,7 +182,7 @@ const EventsDisplay = () => {
                             </li>
                         )
                     })
-                : <>No Events Scheduled</> }
+                : <li className="p-4 text-lg">Check Facebook for the schedule.</li> }
             </ul>
             </div>
         </div>

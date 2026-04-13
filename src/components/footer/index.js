@@ -41,7 +41,7 @@ const Footer = () => {
                                         {day.day}
                                     </span>
                                     <span className="text-xl md:text-2xl ml-2">
-                                        {day.open} - {day.closed}
+                                        {day.closed ? `${day.open} - ${day.closed}` : day.open}
                                     </span>
                                 </li>
                             )

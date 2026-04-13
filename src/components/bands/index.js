@@ -1,7 +1,36 @@
 import React from 'react'
 import { bands } from '../../data/events'
 
+const FACEBOOK_URL = "https://www.facebook.com/JaxBucerias"
+
+const FacebookScheduleNotice = () => (
+    <div className="my-8 p-6 border-2 border-neutral-600 rounded-lg max-w-3xl">
+        <p className="text-lg sm:text-xl mb-4">
+            During the summer and low season we do not list a full weekly band lineup on this site. <strong>Check Facebook for the schedule</strong>—that is where we post who is playing and any last-minute changes.
+        </p>
+        <a
+            href={FACEBOOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="headers text-xl inline-block px-4 py-3 hover:bg-neutral-100 hover:text-neutral-900 bg-red-600 text-neutral-100 transition-colors rounded-sm"
+        >
+            Jax on Facebook
+        </a>
+    </div>
+)
+
 const BandsDisplay = () => {
+
+    if (!bands?.length) {
+        return (
+            <div className="flex flex-col">
+                <h1 className="headers text-6xl">
+                    Bands
+                </h1>
+                <FacebookScheduleNotice />
+            </div>
+        )
+    }
 
     const days = [
         'Sunday',
@@ -86,7 +115,7 @@ const BandsDisplay = () => {
                             </li>
                         )
                     })
-                : <>Check Facebook During Summer</> }
+                : <li className="p-4 text-lg">Check Facebook for the schedule.</li> }
             </ul>
             </div>
             <div className="my-4">
@@ -120,7 +149,7 @@ const BandsDisplay = () => {
                             </li>
                         )
                     })
-                : <>Check Facebook During Summer</> }
+                : <li className="p-4 text-lg">Check Facebook for the schedule.</li> }
             </ul>
             </div>
             <div className="my-4">
@@ -154,7 +183,7 @@ const BandsDisplay = () => {
                             </li>
                         )
                     })
-                : <>Check Facebook During Summer</> }
+                : <li className="p-4 text-lg">Check Facebook for the schedule.</li> }
             </ul>
                 </div>
         </div>
