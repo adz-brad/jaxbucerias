@@ -1,3 +1,11 @@
+# Node: @mapbox/node-pre-gyp and others require >=18. .nvmrc is read by Netlify; this reinforces it.
+[build]
+  command = "yarn build"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "20"
+
 [[plugins]]
 package = "@netlify/plugin-sitemap"
 

@@ -4,6 +4,9 @@
   "description": "Jax Bar & Grill - Bucerias Nayarit",
   "version": "0.1.0",
   "license": "0BSD",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
